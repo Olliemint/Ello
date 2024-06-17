@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <circle cx="50" cy="50" r="48" fill="#53C2C2" stroke="#53C2C2" stroke-width="4"/>
+  <text x="50" y="60" text-anchor="middle" font-size="40" font-family="Arial" fill="#fff">Ello</text>
+</svg>
