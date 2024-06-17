@@ -1,6 +1,5 @@
 import { useQuery } from "@apollo/client";
 import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { GET_BOOKS } from "../graphql/queries";
 import { getPaginatedItems } from "../hooks/usePagination";
 import BookList from "./BookList";
@@ -38,16 +37,16 @@ const AllBooks: React.FC = () => {
 
   const { books } = data as { books: Book[] };
 
-  const booksWithId = books.map((book) => ({ ...book, id: uuidv4() }));
 
 
-  const paginatedItems = getPaginatedItems(booksWithId, currentPage, 8);
+
+  const paginatedItems = getPaginatedItems(books, currentPage, 8);
   return (
     <div>
       
 
       <ComboxSearch
-        books={booksWithId}
+        books={books}
       />
 
       <BookList books={paginatedItems.data} />

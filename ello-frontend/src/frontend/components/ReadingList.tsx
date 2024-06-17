@@ -16,11 +16,11 @@ const ReadingList: React.FC = () => {
     <div className="w-full">
       {readingList.length > 0 ? (
         <List>
-          {readingList.map((book) => {
+          {readingList.map((book,i) => {
            
             return (
               <ListItem
-                key={book.id}
+                key={i}
                 className="flex items-center justify-between p-4 border-b border-gray-200"
               >
                 
