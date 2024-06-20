@@ -8,6 +8,11 @@ import PaginationBtns from "./PaginationBtns";
 import SkeletonLoader from "./SkeletonLoader";
 
 
+
+
+
+
+
 interface Book {
   author: string;
   coverPhotoURL: string;
@@ -41,15 +46,16 @@ const AllBooks: React.FC = () => {
 
 
   const paginatedItems = getPaginatedItems(books, currentPage, 8);
+
+
+
   return (
     <div>
-      
+      <ComboxSearch books={books} />
 
-      <ComboxSearch
-        books={books}
-      />
-
-      <BookList books={paginatedItems.data} />
+      <div className="">
+        <BookList books={paginatedItems.data} />
+      </div>
 
       <div className="w-full flex items-center justify-center mt-8">
         <PaginationBtns

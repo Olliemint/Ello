@@ -1,8 +1,7 @@
-// src/frontend/graphql/client.ts
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000",
+  uri: "https://ello-production.up.railway.app/graphql",
   cache: new InMemoryCache(),
 });
 
