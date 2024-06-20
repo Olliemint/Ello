@@ -3,12 +3,12 @@ import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { useReadingList } from "../../context.tsx/ReadingListContext";
+import { useReadingList } from "../../context/ReadingListContext";
 import useImageReplace from "../hooks/useImageReplace";
 import { Book } from "../interfaces";
+import ImageWrapper from "./ImageWrapper";
 
 interface BookItemProps {
   book: Book;
@@ -30,7 +30,8 @@ const BookItem: React.FC<BookItemProps> = ({ book }) => {
           color: "#335C6E",
         }}
       >
-        <CardMedia component="img" height="140" image={imageUrl} alt={title} />
+        <ImageWrapper image_url={imageUrl}  />
+        
         <CardContent>
           <Typography variant="h6" component="div">
             {title}

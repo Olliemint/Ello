@@ -7,7 +7,7 @@ import {
 import { Button, ListItem, ListItemText, Typography } from "@mui/material";
 import clsx from "clsx";
 import { useState } from "react";
-import { useReadingList } from "../../context.tsx/ReadingListContext";
+import { useReadingList } from "../../context/ReadingListContext";
 import { useDebounce } from "../hooks/useDebounce";
 import { Book } from "../interfaces";
 

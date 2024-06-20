@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useReadingList } from "../../context.tsx/ReadingListContext";
+import { useReadingList } from "../../context/ReadingListContext";
 
 type TabSwitchProps = {
   activeTab: number;

@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { ReadingListProvider } from "./context.tsx/ReadingListContext";
+import { ReadingListProvider } from "./context/ReadingListContext";
 import AllBooks from "./frontend/components/AllBooks";
 import { AnimatedWrapper } from "./frontend/components/AnimatedWrapper";
 import ReadingList from "./frontend/components/ReadingList";

@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { useReadingList } from "../../context.tsx/ReadingListContext";
+import { useReadingList } from "../../context/ReadingListContext";
 
 
 const ReadingList: React.FC = () => {

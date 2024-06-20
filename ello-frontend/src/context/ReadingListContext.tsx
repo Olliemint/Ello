@@ -1,7 +1,10 @@
 import React, { ReactNode, createContext, useContext, useState } from "react";
-import { Book } from "../frontend/interfaces";
-import { toast } from "react-toastify";
 import { FaCheckCircle, FaInfoCircle } from "react-icons/fa";
+import { toast } from "react-toastify";
+import { Book } from "../frontend/interfaces";
+
+const removeId = "removeId";
+const addId = "addId";
 
 interface ReadingListContextProps {
   readingList: Book[];
@@ -44,13 +47,12 @@ export const ReadingListProvider: React.FC<ReadingListProviderProps> = ({
     });
     toast.success("Book added to reading list", {
       hideProgressBar: true,
-      icon: <FaCheckCircle
-        className="text-2xl text-white"
-      />,
+      icon: <FaCheckCircle className="text-2xl text-white" />,
       style: {
         backgroundColor: "#4AA088",
         color: "#FFFFFF",
       },
+      toastId: addId,
     });
   };
 
@@ -58,14 +60,12 @@ export const ReadingListProvider: React.FC<ReadingListProviderProps> = ({
     setReadingList((prevList) => prevList.filter((b) => b.title !== title));
     toast.info("Book removed from reading list", {
       hideProgressBar: true,
-      icon: <FaInfoCircle
-        className="text-2xl text-white"
-      />,
+      icon: <FaInfoCircle className="text-2xl text-white" />,
       style: {
         backgroundColor: "#F76434",
         color: "#FFFFFF",
       },
-    
+      toastId: removeId,
     });
   };
 
