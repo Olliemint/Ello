@@ -32,7 +32,7 @@
 ### Running the Project Locally
 1. Start the GraphQL server
     ```sh
-    cd src/backend
+    cd backend
     npm install
     npm start
     ```
